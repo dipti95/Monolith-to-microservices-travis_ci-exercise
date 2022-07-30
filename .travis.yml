@@ -19,5 +19,5 @@ script:
   - docker tag simple_node dipti20/simple_node:latest
 
 after_success:
-  - echo "$DOCKER_PASSWORD" | docker login -u dipti20 --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push dipti20/simple_node
